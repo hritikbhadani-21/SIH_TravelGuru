@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dash from "./pages/Dash";
 import Loader from "./Components/common/Loader";
+import Hotels from "./Components/section/Hotels";
 
 
 function App() {

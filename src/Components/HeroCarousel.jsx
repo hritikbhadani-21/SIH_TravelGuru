@@ -1,18 +1,20 @@
 // src/components/HeroCarousel.jsx
 import React, { useState, useEffect } from "react";
 import "./HeroCarousel.css";
+import { useNavigate } from "react-router-dom";
 
-// Add your local images or use online ones
-import Image1 from "../assets/images/img1.jpg";
-import Image2 from "../assets/images/img2.jpg";
-import Image3 from "../assets/images/img3.jpg";
-
-const images = [Image1, Image2, Image3];
+// Images from public folder:
+const images = [
+  "/images/monuments/agrafort.svg",
+  "/images/monuments/tajmahalhero.svg",
+  "/images/monuments/victoria.svg",
+];
 
 const HeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
-  // Auto-slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       goToNext();
@@ -32,6 +34,11 @@ const HeroCarousel = () => {
     );
   };
 
+  const handleSearch = () => {
+    // Navigate with query string
+    navigate(`/hotels?query=${encodeURIComponent(searchQuery)}`);
+  };
+
   return (
     <div
       className="hero-carousel"
@@ -42,16 +49,13 @@ const HeroCarousel = () => {
           <input
             type="text"
             placeholder="Enter your Destination"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button>Search</button>
+          <button onClick={handleSearch}>Search</button>
         </div>
 
-        <div className="arrow left" onClick={goToPrev}>
-          ❮
-        </div>
-        <div className="arrow right" onClick={goToNext}>
-          ❯
-        </div>
+        
 
         <div className="dots">
           {images.map((_, idx) => (
