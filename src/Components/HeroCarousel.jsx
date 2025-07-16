@@ -36,7 +36,8 @@ const HeroCarousel = () => {
 
   const handleSearch = () => {
     // Navigate with query string
-    navigate(`/hotels?query=${encodeURIComponent(searchQuery)}`);
+    navigate(`/main?query=${encodeURIComponent(searchQuery)}`);
+
   };
 
   return (

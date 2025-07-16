@@ -5,6 +5,8 @@
 
 .hotels-section h2 {
   font-size: 3rem;
+  margin-bottom: 91px;
+  margin-top: -15px;
 }
 
 .hotels-section .orange {
@@ -37,7 +39,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 200px;
 }
 
 .hotel-card {

@@ -24,20 +24,12 @@ const Hero = () => {
       </div>
 
       <div className="hero-right">
-        <div className="image-grid">
-          <img
-            src="Travguru\public\images\down left.svg"
-            alt="Taj Mahal 1"
-          />
-          <img
-            src="Travguru\public\images\right.svg"
-            alt="Taj Mahal 2"
-          />
-          <img
-            src="Travguru\public\images\up left.svg"
-            alt="Taj Mahal 3"
-          />
-        </div>
+        <div class="image-grid">
+  <img src="/hero/up left.svg" alt="Up Left" class="upleft" />
+  <img src="/hero/down left.svg" alt="Down Left" class="downleft" />
+  <img src="/hero/right.svg" alt="Right" class="right" />
+</div>
+
       </div>
     </div>
   );

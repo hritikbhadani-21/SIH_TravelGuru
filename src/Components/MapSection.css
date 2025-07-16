@@ -1,0 +1,19 @@
+/* src/components/MapSection.css */
+
+.map-section {
+  padding: 100px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.map-image-container {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.map-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}

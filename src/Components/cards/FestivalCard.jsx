@@ -25,3 +25,4 @@ const FestivalCard = ({ image, title, description }) => {
 };
 
 export default FestivalCard;
+

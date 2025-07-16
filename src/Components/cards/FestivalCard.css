@@ -59,6 +59,7 @@
 .festival-buttons {
   display: flex;
   gap: 20px;
+  margin-left: 60px;
 }
 
 .btn-primary {
